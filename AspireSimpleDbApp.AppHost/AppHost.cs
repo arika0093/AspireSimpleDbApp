@@ -1,6 +1,10 @@
 var builder = DistributedApplication.CreateBuilder(args);
 
-var postgres = builder.AddPostgres("postgres").WithImage("postgres:16-alpine").WithPgAdmin();
+var postgres = builder
+    .AddPostgres("postgres")
+    .WithImage("postgres:16-alpine")
+    .WithPgWeb()
+    .WithDataVolume();
 
 var database = postgres.AddDatabase("appdb");
 
