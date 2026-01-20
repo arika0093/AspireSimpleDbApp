@@ -1,0 +1,16 @@
+{
+    "openApiPath": "../AspireSimpleDbApp.ApiService/OpenAPI/AspireSimpleDbApp.ApiService.json",
+    "namespace": "AspireSimpleDbApp.Web.ApiClient",
+    "naming": {
+        "useOpenApiTitle": false,
+        "interfaceName": "ApiServiceClient"
+    },
+    "outputFolder": "./ApiClient",
+    "multipleInterfaces": "ByTag",
+    "codeGeneratorSettings": {
+        "generateNullableReferenceTypes": true
+    },
+    "dependencyInjectionSettings": {
+        "baseUrl": "https+http://apiservice"
+    }
+}

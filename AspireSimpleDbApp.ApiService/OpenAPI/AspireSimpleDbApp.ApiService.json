@@ -19,7 +19,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Product"
+                    "$ref": "#/components/schemas/ProductDto"
                   }
                 }
               }
@@ -31,7 +31,14 @@
   },
   "components": {
     "schemas": {
-      "Product": {
+      "ProductDto": {
+        "required": [
+          "id",
+          "name",
+          "description",
+          "price",
+          "createdAt"
+        ],
         "type": "object",
         "properties": {
           "id": {
@@ -49,7 +56,7 @@
             "type": "string"
           },
           "price": {
-            "pattern": "^-?(?:0|[1-9]\\d*)(?:\\.\\d+)?$",
+            "pattern": "^-?(?:0|[1-9]\\d*)(?:\\.\\d+)?(?:[eE][+-]?\\d+)?$",
             "type": [
               "number",
               "string"

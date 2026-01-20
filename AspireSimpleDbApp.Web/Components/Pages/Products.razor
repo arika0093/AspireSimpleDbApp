@@ -1,5 +1,6 @@
 @page "/products"
-@inject ProductApiClient ApiClient
+@using AspireSimpleDbApp.Web.ApiClient
+@inject IAspireSimpleDbAppApiServiceApi ApiClient
 @rendermode InteractiveServer
 
 <PageTitle>Products</PageTitle>
@@ -35,7 +36,7 @@ else
                     <td>@product.Id</td>
                     <td>@product.Name</td>
                     <td>@product.Description</td>
-                    <td>$@product.Price.ToString("F2")</td>
+                    <td>$@product.Price.ToString()</td>
                     <td>@product.CreatedAt.ToString("yyyy-MM-dd HH:mm:ss")</td>
                 </tr>
             }
@@ -44,10 +45,10 @@ else
 }
 
 @code {
-    private List<Product>? products;
+    private List<ProductDto>? products;
 
     protected override async Task OnInitializedAsync()
     {
-        products = await ApiClient.GetProductsAsync();
+        products = (await ApiClient.GetProducts()).ToList();
     }
 }

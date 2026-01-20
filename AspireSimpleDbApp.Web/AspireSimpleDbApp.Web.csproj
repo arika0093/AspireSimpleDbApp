@@ -3,7 +3,12 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <RefitterSkipValidation>true</RefitterSkipValidation>
   </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Refit.HttpClientFactory" Version="9.0.2" />
+    <PackageReference Include="Refitter.MSBuild" Version="1.7.1" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\AspireSimpleDbApp.ServiceDefaults\AspireSimpleDbApp.ServiceDefaults.csproj" />

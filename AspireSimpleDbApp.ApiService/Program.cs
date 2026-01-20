@@ -1,5 +1,6 @@
 using AspireSimpleDbApp.Database;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,8 +28,14 @@ app.MapGet(
         "/products",
         async (AppDbContext dbContext) =>
         {
-            var products = await dbContext.Products.ToListAsync();
-            return products;
+            return dbContext.Products.SelectExpr<Product, ProductDto>(x => new
+            {
+                x.Id,
+                x.Name,
+                x.Description,
+                Price = (double)x.Price,
+                x.CreatedAt,
+            });
         }
     )
     .WithName("GetProducts");
