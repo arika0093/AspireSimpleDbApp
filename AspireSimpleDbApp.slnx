@@ -1,8 +1,8 @@
 <Solution>
-  <Project Path="AspireSimpleDbApp.ApiService/AspireSimpleDbApp.ApiService.csproj" />
-  <Project Path="AspireSimpleDbApp.AppHost/AspireSimpleDbApp.AppHost.csproj" />
-  <Project Path="AspireSimpleDbApp.Database/AspireSimpleDbApp.Database.csproj" />
-  <Project Path="AspireSimpleDbApp.DbMigration/AspireSimpleDbApp.DbMigration.csproj" />
-  <Project Path="AspireSimpleDbApp.ServiceDefaults/AspireSimpleDbApp.ServiceDefaults.csproj" />
-  <Project Path="AspireSimpleDbApp.Web/AspireSimpleDbApp.Web.csproj" />
+  <Project Path="src/AspireSimpleDbApp.ApiService/AspireSimpleDbApp.ApiService.csproj" />
+  <Project Path="src/AspireSimpleDbApp.AppHost/AspireSimpleDbApp.AppHost.csproj" />
+  <Project Path="src/AspireSimpleDbApp.Database/AspireSimpleDbApp.Database.csproj" />
+  <Project Path="src/AspireSimpleDbApp.DbMigration/AspireSimpleDbApp.DbMigration.csproj" />
+  <Project Path="src/AspireSimpleDbApp.ServiceDefaults/AspireSimpleDbApp.ServiceDefaults.csproj" />
+  <Project Path="src/AspireSimpleDbApp.Web/AspireSimpleDbApp.Web.csproj" />
 </Solution>
