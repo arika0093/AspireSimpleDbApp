@@ -74,7 +74,7 @@ namespace AspireSimpleDbApp.Web.ApiClient
 
         [JsonPropertyName("price")]
         [System.ComponentModel.DataAnnotations.Required(AllowEmptyStrings = true)]
-        [System.ComponentModel.DataAnnotations.RegularExpression(@"^-?(?:0|[1-9]\d*)(?:\.\d+)?(?:[eE][+-]?\d+)?$")]
+        [System.ComponentModel.DataAnnotations.RegularExpression(@"^-?(?:0|[1-9]\d*)(?:\.\d+)?$")]
         public double Price { get; set; } = default!;
 
         [JsonPropertyName("createdAt")]

@@ -33,7 +33,7 @@ app.MapGet(
                 x.Id,
                 x.Name,
                 x.Description,
-                Price = (double)x.Price,
+                x.Price,
                 x.CreatedAt,
             });
         }
