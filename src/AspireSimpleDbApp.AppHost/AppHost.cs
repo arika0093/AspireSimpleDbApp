@@ -27,4 +27,9 @@ builder
     .WithReference(database)
     .WaitFor(apiService);
 
+builder
+    .AddProject<Projects.AspireSimpleDbApp_BotWorker>("botworker")
+    .WithReference(database)
+    .WaitForCompletion(dbMigration);
+
 builder.Build().Run();

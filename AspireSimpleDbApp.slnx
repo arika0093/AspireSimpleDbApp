@@ -1,6 +1,7 @@
 <Solution>
   <Project Path="src/AspireSimpleDbApp.ApiService/AspireSimpleDbApp.ApiService.csproj" />
   <Project Path="src/AspireSimpleDbApp.AppHost/AspireSimpleDbApp.AppHost.csproj" />
+  <Project Path="src/AspireSimpleDbApp.BotWorker/AspireSimpleDbApp.BotWorker.csproj" />
   <Project Path="src/AspireSimpleDbApp.Database/AspireSimpleDbApp.Database.csproj" />
   <Project Path="src/AspireSimpleDbApp.DbMigration/AspireSimpleDbApp.DbMigration.csproj" />
   <Project Path="src/AspireSimpleDbApp.ServiceDefaults/AspireSimpleDbApp.ServiceDefaults.csproj" />

@@ -28,14 +28,17 @@ app.MapGet(
         "/products",
         async (AppDbContext dbContext) =>
         {
-            return dbContext.Products.SelectExpr<Product, ProductDto>(x => new
-            {
-                x.Id,
-                x.Name,
-                x.Description,
-                x.Price,
-                x.CreatedAt,
-            });
+            return dbContext
+                .Products.SelectExpr<Product, ProductDto>(x => new
+                {
+                    x.Id,
+                    x.Name,
+                    x.Description,
+                    x.Price,
+                    x.CreatedAt,
+                })
+                .OrderByDescending(x => x.CreatedAt)
+                .Take(100);
         }
     )
     .WithName("GetProducts");

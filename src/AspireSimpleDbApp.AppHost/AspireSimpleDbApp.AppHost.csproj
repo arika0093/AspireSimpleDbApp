@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AspireSimpleDbApp.ApiService\AspireSimpleDbApp.ApiService.csproj" />
+    <ProjectReference Include="..\AspireSimpleDbApp.BotWorker\AspireSimpleDbApp.BotWorker.csproj" />
     <ProjectReference Include="..\AspireSimpleDbApp.Web\AspireSimpleDbApp.Web.csproj" />
     <ProjectReference Include="..\AspireSimpleDbApp.DbMigration\AspireSimpleDbApp.DbMigration.csproj" />
   </ItemGroup>
